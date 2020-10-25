@@ -1,0 +1,211 @@
+<!doctype html>
+<!-- This is two hours of my life I'm not getting back -->
+<html>
+<head>
+    <title>Bingo</title>
+    <link href='https://fonts.googleapis.com/css?family=Averia Gruesa Libre' rel='stylesheet'>
+    <style>
+        table, th, td {
+          border: 4px solid #ffffff;
+          border-collapse: collapse;
+          text-align: center;
+        }
+        .font-normal {
+            font-family: "Averia Gruesa Libre";
+            font-size: 24px;
+            color: #000000;
+            background-color: #ffffff;
+        }
+    </style>
+    <script>
+        let darkMode = true;
+        
+        let tiles = [
+            "archives",
+            "bomberman",
+            "canadians",
+            "connection",
+            "contempt",
+            "contemptmk2",
+            "copyright",
+            "engines",
+            "feelings",
+            "fortnite",
+            "games",
+            "genres",
+            "gerald",
+            "jersey",
+            "megaman",
+            "meta",
+            "morons",
+            "nihilism",
+            "opinions",
+            "paradox",
+            "pokemon",
+            "programmers",
+            "reginald",
+            "silence",
+            "silencer",
+            "style",
+            "subject",
+            "totallynotnihilism",
+            "tvtropes",
+            "whoops",
+            "wikipedia",
+            "zelda",
+        ];
+        
+        function generate() {
+            let clone = tiles.slice();
+            shuffle(clone);
+            
+            document.getElementById("B").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/B.png\" />";
+            document.getElementById("I").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/I.png\" />";
+            document.getElementById("N").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/N.png\" />";
+            document.getElementById("G").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/G.png\" />";
+            document.getElementById("O").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/O.png\" />";
+            document.getElementById("B0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+        };
+        
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        };
+        
+        function toggleDark(checkbox) {
+            if (checkbox.checked) {
+                setDarkMode();
+            } else {
+                setLightMode();
+            }
+            generate();
+        };
+        
+        function setDarkMode() {
+            darkMode = true;
+            document.body.style.backgroundColor = "#333333";
+            let css = document.createElement("style");
+            css.innerHTML = "table, th, td {" +
+                "    border: 4px solid #ffffff;" +
+                "    border-collapse: collapse;" +
+                "    text-align: center;" +
+                "}" +
+                ".font-normal {" +
+                "    font-family: \"Averia Gruesa Libre\";" +
+                "    font-size: 24px;" +
+                "    color: #ffffff;" +
+                "    background-color: #333333;" +
+            "}";
+            // this is probably a leak of some kind
+            document.body.appendChild(css);
+        };
+        
+        function setLightMode() {
+            darkMode = false;
+            document.body.style.backgroundColor = "#ffffff";
+            let css = document.createElement("style");
+            css.innerHTML = "table, th, td {" +
+                "    border: 4px solid #000000;" +
+                "    border-collapse: collapse;" +
+                "    text-align: center;" +
+                "}" +
+                ".font-normal {" +
+                "    font-family: \"Averia Gruesa Libre\";" +
+                "    font-size: 24px;" +
+                "    color: #000000;" +
+                "    background-color: #ffffff;" +
+            "}";
+            // this is probably a leak of some kind
+            document.body.appendChild(css);
+        };
+    </script>
+</head>
+
+<body>
+<body>
+<p class = "font-normal">
+    <button onclick = "generate()" class = "font-normal">Generate New Bingo Card</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type = "checkbox" id = "mode" onchange = "toggleDark(this);" checked> Dark Mode
+</p>
+
+<p/>
+
+<table width = 800 height = 960>
+  <tr>
+    <th width = 20% class = "font-large" id = "B"></th>
+    <th width = 20% class = "font-large" id = "I"></th>
+    <th width = 20% class = "font-large" id = "N"></th>
+    <th width = 20% class = "font-large" id = "G"></th>
+    <th width = 20% class = "font-large" id = "O"></th>
+  </tr>
+  <tr>
+    <td id = "B0"></td>
+    <td id = "B1"></td>
+    <td id = "B2"></td>
+    <td id = "B3"></td>
+    <td id = "B4"></td>
+  </tr>
+  <tr>
+    <td id = "I0"></td>
+    <td id = "I1"></td>
+    <td id = "I2"></td>
+    <td id = "I3"></td>
+    <td id = "I4"></td>
+  </tr>
+  <tr>
+    <td id = "N0"></td>
+    <td id = "N1"></td>
+    <td><img src = "content/free.png" /></td>
+    <td id = "N3"></td>
+    <td id = "N4"></td>
+  </tr>
+  <tr>
+    <td id = "G0"></td>
+    <td id = "G1"></td>
+    <td id = "G2"></td>
+    <td id = "G3"></td>
+    <td id = "G4"></td>
+  </tr>
+  <tr>
+    <td id = "O0"></th>
+    <td id = "O1"></th>
+    <td id = "O2"></th>
+    <td id = "O3"></th>
+    <td id = "O4"></th>
+  </tr>
+</table>
+
+<script>
+    setDarkMode();
+    generate();
+</script>
+
+</body>
+</html>
