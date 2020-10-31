@@ -28,3 +28,9 @@ h1 {
     font-size: 40px;
     color: #ffffff;
 }
+a:link {
+    color: #00bfff;
+}
+a:visited {
+    color: #cc66ff;
+}
