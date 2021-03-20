@@ -15,7 +15,8 @@ table, th, td {
     text-align: center;
 }
 h1 {
-    font-size: 40px;
+    font-size: 36px;
+    text-align: center;
 }
 .font-normal {
     font-size: 24px;
