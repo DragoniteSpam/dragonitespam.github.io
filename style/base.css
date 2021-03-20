@@ -28,6 +28,12 @@ a:link {
 a:visited {
     color: #00d000;
 }
+button {
+    font-family: "Averia Gruesa Libre";
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #222222;
+}
 
 .font-larger {
     font-size: 24px;
