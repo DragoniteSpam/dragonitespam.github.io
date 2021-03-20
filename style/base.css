@@ -36,3 +36,20 @@ a:visited {
     text-align: center;
     font-size: 24px;
 }
+.image-thumbnail {
+    vertical-align: top;
+    max-width: 160px;
+    float: left;
+    margin: 20px 20px 20px 20px;
+}
+.noborders {
+    border: 0px solid #000000;
+    border-right: hidden;
+    border-left: hidden;
+    border-top: hidden;
+    border-bottom: hidden;
+}
+.desc {
+    font-size: 16px;
+    text-align: left;
+}
