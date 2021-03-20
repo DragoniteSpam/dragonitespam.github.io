@@ -6,8 +6,6 @@
     <script src = "../js/jquery-3.6.0.min.js"></script>
     <script>$("head").load("../include/head.html");</script>
     <script>
-        let darkMode = true;
-        
         let tiles = [
             "archives",
             "bomberman",
@@ -49,35 +47,35 @@
             let clone = tiles.slice();
             shuffle(clone);
             
-            document.getElementById("B").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/B.png\" />";
-            document.getElementById("I").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/I.png\" />";
-            document.getElementById("N").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/N.png\" />";
-            document.getElementById("G").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/G.png\" />";
-            document.getElementById("O").innerHTML = "<img src = \"content/" + (darkMode ? "dark" : "light") + "/O.png\" />";
-            document.getElementById("B0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("B1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("B2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("B3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("B4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("I0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("I1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("I2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("I3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("I4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("N0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("N1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("N3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("N4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("G0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("G1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("G2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("G3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("G4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("O0").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("O1").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("O2").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("O3").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
-            document.getElementById("O4").innerHTML = "<img src = content/" + (darkMode ? "dark" : "light") + "/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B").innerHTML = "<img src = \"content/dark/B.png\" />";
+            document.getElementById("I").innerHTML = "<img src = \"content/dark/I.png\" />";
+            document.getElementById("N").innerHTML = "<img src = \"content/dark/N.png\" />";
+            document.getElementById("G").innerHTML = "<img src = \"content/dark/G.png\" />";
+            document.getElementById("O").innerHTML = "<img src = \"content/dark/O.png\" />";
+            document.getElementById("B0").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B1").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B2").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B3").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("B4").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I0").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I1").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I2").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I3").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("I4").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N0").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N1").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N3").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("N4").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G0").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G1").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G2").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G3").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("G4").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O0").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O1").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O2").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O3").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
+            document.getElementById("O4").innerHTML = "<img src = content/dark/" + clone.splice(-1, 1) + ".png />";
         };
         
         function shuffle(array) {
@@ -86,32 +84,6 @@
                 [array[i], array[j]] = [array[j], array[i]];
             }
             return array;
-        };
-        
-        function toggleDark(checkbox) {
-            if (checkbox.checked) {
-                setDarkMode();
-            } else {
-                setLightMode();
-            }
-            generate();
-        };
-        
-        function setDarkMode() {
-            darkMode = true;
-            let css = document.createElement("style");
-            css.innerHTML = "table, th, td {" +
-                "    border: 4px solid #ffffff;" +
-                "    border-collapse: collapse;" +
-                "    text-align: center;" +
-                "}" +
-                ".font-normal {" +
-                "    font-family: \"Averia Gruesa Libre\";" +
-                "    font-size: 24px;" +
-                "    color: #ffffff;" +
-            "}";
-            // this is probably a leak of some kind
-            document.body.appendChild(css);
         };
         
         function setLightMode() {
@@ -139,8 +111,6 @@
 <p/>
 <p>
     <button onclick = "generate()">Generate New Bingo Card</button>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <input type = "checkbox" id = "mode" onchange = "toggleDark(this);" checked> Dark Mode
 </p>
 
 <p/>
@@ -195,7 +165,6 @@
 </p>
 
 <script>
-    setDarkMode();
     generate();
 </script>
 

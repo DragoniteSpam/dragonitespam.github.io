@@ -25,6 +25,9 @@ p {
 a:link {
     color: #00d000;
 }
+a:visited {
+    color: #00d000;
+}
 
 .font-larger {
     font-size: 24px;
