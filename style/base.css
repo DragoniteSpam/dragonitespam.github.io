@@ -1,12 +1,13 @@
-p {
+:root {
     font-family: "Averia Gruesa Libre";
-    font-size: 24px;
-    color: #ffffff;
     font-size: 20px;
-}
-body {
+    margin-left: 25%;
+    margin-right: 25%;
     color: #ffffff;
     background-color: #333333;
+}
+p {
+    
 }
 table, th, td {
     border: 4px solid #ffffff;
@@ -14,19 +15,13 @@ table, th, td {
     text-align: center;
 }
 h1 {
-    font-family: "Averia Gruesa Libre";
     font-size: 40px;
-    color: #ffffff;
 }
 .font-normal {
-    font-family: "Averia Gruesa Libre";
     font-size: 24px;
-    color: #ffffff;
 }
 .font-large {
-    font-family: "Averia Gruesa Libre";
     font-size: 40px;
-    color: #ffffff;
 }
 a:link {
     color: #00bfff;
