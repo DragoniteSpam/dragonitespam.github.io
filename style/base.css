@@ -20,11 +20,19 @@ h2 {
     text-align: center;
 }
 p {
-    font-size: 24px;
+    font-size: 20px;
 }
 a:link {
     color: #00bfff;
 }
 a:visited {
     color: #cc66ff;
+}
+
+.font-larger {
+    font-size: 24px;
+}
+.psuedoheader {
+    text-align: center;
+    font-size: 24px;
 }
