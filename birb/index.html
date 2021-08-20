@@ -1,0 +1,85 @@
+<!doctype html>
+<!-- This is two hours of my life I'm not getting back -->
+<html>
+<head>
+    <title>Bird Name Generator</title>
+    <script src = "../js/jquery-3.6.0.min.js"></script>
+    <script>$("head").load("../include/head.html");</script>
+    <script>
+        let birbs = [
+            "Woodpecker",
+            "Pigeon",
+            "Peacock",
+            "Vulture",
+            "Swallow",
+            "Seagull",
+            "Quail",
+            "Pelican",
+            "Turkey",
+            "Crane",
+            "Kingfisher",
+            "Hummingbird",
+            "Cormorant",
+            "Ostrich",
+            "Crow",
+            "Raven",
+            "Dove",
+            "Nightingale",
+            "Eagle",
+            "Swan",
+            "Flamingo",
+            "Goose",
+            "Cuckoo",
+            "Owl",
+            "Partridge",
+            "Goldfinch",
+            "Robin",
+            "Sandpiper",
+            "Stork",
+            "Ibis",
+            "Skylark",
+            "Canary",
+            "Starling",
+            "Macaw",
+            "Cockatoo",
+            "Heron",
+            "Toucan",
+            "Blue Jay",
+            "Cardinal",
+            "Chickadee",
+            "Bluebird",
+            "Spoonbill",
+            "Kiwi",
+            "Wren",
+            "Mockingbird",
+            "Pheasant",
+            "Arctic Tern",
+            "Hawk",
+            "Puffin",
+            "Condor",
+            "Kestrel",
+            "Merlin",
+            "Oriole",
+        ];
+        
+        function generate() {
+            document.getElementById("result").innerHTML = birbs[Math.floor(Math.random() * birbs.length)];
+        };
+    </script>
+</head>
+
+<body>
+<p/>
+<p>
+    <button id = "button" onclick = "generate()">Birb</button>
+</p>
+<p id = "result">
+    Click to generate a random birb
+</p>
+
+<script>
+    generate();
+</script>
+
+</body>
+</html>
